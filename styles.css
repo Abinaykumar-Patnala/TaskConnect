@@ -4,6 +4,7 @@ body {
     background-color: #1a1a1a;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -130,4 +131,8 @@ body {
 
 .footer-text a:hover {
     text-decoration: underline;
+}
+
+.title h1{
+    font-size:3em
 }
