@@ -17,7 +17,7 @@ switchTab("jobseeker");
 
 // Handle Job Seeker Login
 document.getElementById("jobseeker-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     let email = document.getElementById("jobseeker-email").value;
     let password = document.getElementById("jobseeker-password").value;
     
@@ -38,3 +38,24 @@ document.getElementById("hiring-form").addEventListener("submit", function(event
     // Redirect to hiring dashboard
     window.location.href = "hiring-dashboard.html";
 });
+
+
+//This is the code for tracking the no.of visiits
+function visitCount(){
+    // Get the visit count from localStorage
+let visitCount = localStorage.getItem("visitCount");
+
+// Check if it exists, if not, initialize it
+if (visitCount === null) {
+    visitCount = 1;
+} else {
+    visitCount = parseInt(visitCount) + 1;
+}
+
+// Update the visit count in localStorage
+localStorage.setItem("visitCount", visitCount);
+
+// Display the visit count on the webpage
+// document.body.innerHTML = `<h1>Visit Count: ${visitCount}</h1>`;
+}
+
